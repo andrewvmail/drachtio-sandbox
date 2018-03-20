@@ -9,6 +9,8 @@ Getting Started
 Debug with Cerebral Debugger 
 https://github.com/cerebral/cerebral-debugger/releases
 
+<img src="https://user-images.githubusercontent.com/2431354/37635373-7207750c-2bb8-11e8-8691-085576c81b41.png" width="640px"/>
+
 ```sh
 # clone it
 git clone git@github.com:andrewvmail/drachtio-sandbox.git
