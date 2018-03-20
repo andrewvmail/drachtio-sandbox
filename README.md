@@ -1,49 +1,45 @@
-Express & ES6 REST API Boilerplate
-==================================
+Drachtio Sandbox
+---
 
-This is a straightforward boilerplate for building REST APIs with ES6 and Express.
-
-- ES6 support via [babel](https://babeljs.io)
-- REST resources as middleware via [resource-router-middleware](https://github.com/developit/resource-router-middleware)
-- CORS support via [cors](https://github.com/troygoode/node-cors)
-- Body Parsing via [body-parser](https://github.com/expressjs/body-parser)
-
-> Tip: If you are using [Mongoose](https://github.com/Automattic/mongoose), you can automatically expose your Models as REST resources using [restful-mongoose](https://git.io/restful-mongoose).
-
+Voip mash potatoes
 
 
 Getting Started
 ---------------
+Debug with Cerebral Debugger 
+https://github.com/cerebral/cerebral-debugger/releases
 
 ```sh
 # clone it
-git clone git@github.com:developit/express-es6-rest-api.git
-cd express-es6-rest-api
-
-# Make it your own
-rm -rf .git && git init && npm init
-
-# Install dependencies
+git clone git@github.com:andrewvmail/drachtio-sandbox.git
+cd drachtio-sandbox
 npm install
 
+
+# Get drachtio docker and run it
+docker run --rm --name drachtio -p 5060:5060 -p 9022:9022 drachtio/drachtio-server drachtio --contact "sip:*;transport=tcp,udp"
+
 # Start development live-reload server
-PORT=8080 npm run dev
+# CEREBRAL_DEBUGGER=IP_OF_DEBUGGER:PORT npm run dev
+CEREBRAL_DEBUGGER=192.168.50.197:8585 npm run dev
 
 # Start production server:
 PORT=8080 npm start
+
 ```
+
 Docker Support
 ------
 ```sh
-cd express-es6-rest-api
+cd drachtio-sandbox
 
 # Build your docker
-docker build -t es6/api-service .
+docker build -t tagname/drachtio-sandbox .
 #            ^      ^           ^
 #          tag  tag name      Dockerfile location
 
 # run your docker
-docker run -p 8080:8080 es6/api-service
+docker run -p 8080:8080 tagname/drachtio-sandbox
 #                 ^            ^
 #          bind the port    container tag
 #          to your host
