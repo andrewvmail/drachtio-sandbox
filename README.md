@@ -3,6 +3,9 @@ Drachtio Sandbox
 
 Voip mash potatoes
 
+- p2p
+- register
+- invite
 
 Getting Started
 ---------------
